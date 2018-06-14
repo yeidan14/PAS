@@ -1824,6 +1824,37 @@ body.menu-pin .overlay .overlay-brand {
 /* Pages Scroll bar
 ------------------------------------
 */
+
+.arriba {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding: 0;
+  background-color: #f2f4f5;
+}
+.arriba .inner {
+  position: relative;
+  z-index: 2;
+}
+.arriba.lg {
+  height: 600px;
+}
+.arriba .cover-photo {
+  width: 100%;
+  height: inherit;
+  overflow: hidden;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  background-size: cover;
+  background-color: #007be8;
+}
+.arriba .cover-photo img {
+  display: none;
+}
+.arriba h1 {
+  font-size: 44px;
+}
+/* 
 .scroll {
   position: relative;
   overflow: auto;
@@ -3322,9 +3353,32 @@ hr.dotted {
 .jumbotron p.small {
   font-size: 85%;
 }
+
+
 /* Responsive Handlers : Typo
 ------------------------------------
+
+
+
 */
+
+
+.arriba {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+.arriba p {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: inherit;
+}
+.arriba p.small {
+  font-size: 85%;
+}
+
+
+
 @media (max-width: 1400px) {
   body,
   p {
@@ -3391,6 +3445,13 @@ hr.dotted {
   font-size: 13px;
 }
 .windows .jumbotron p.small {
+  font-size: 85%;
+}
+
+.windows .arriba {
+  font-size: 13px;
+}
+.windows .arriba p.small {
   font-size: 85%;
 }
 .windows small,
@@ -9555,10 +9616,14 @@ input.list-view-search {
   width: 100%;
 }
 /* Cover
-------------------------------------
+----  cambiar tamaño del inicio --------------------------------
 */
 .social-wrapper .social .jumbotron {
-  height: 60vh;
+  height: 90vh;
+  padding-top: 0;
+}
+.social-wrapper .social .arriba {
+  height: 18vh;
   padding-top: 0;
 }
 .social-wrapper .social .cover-photo {
@@ -14072,6 +14137,10 @@ Main components
   .container-fluid .jumbotron {
     padding: 0;
   }
+     .box-layout .container .arriba,
+  .container-fluid .arriba {
+    padding: 0;
+  }
   .d-flex-md-up {
     display: flex;
   }
@@ -14291,6 +14360,11 @@ Main components
     overflow: hidden;
   }
   .jumbotron,
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+    .arriba,
   .container-fluid {
     padding-left: 0;
     padding-right: 0;
@@ -14680,6 +14754,8 @@ Main components
 }
 .theme .jumbotron {
   background-color: #f6f9fa;
+}.theme .arriba {
+  background-color: #f6f9fa;
 }
 .theme .breadcrumb > .breadcrumb-item.active {
   color: #000;
@@ -14716,6 +14792,8 @@ Main components
   border: 1px solid #f2f2f2;
 }
 .jumbotron {
+  background-color: #f6f9fa;
+}.arriba {
   background-color: #f6f9fa;
 }
 .breadcrumb > .breadcrumb-item.active {

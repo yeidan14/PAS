@@ -3,15 +3,14 @@
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta charset="utf-8" />
-    <title>Laboratorios</title>
+    <title>PAS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
   
-   
-
-    
-    <link href="{{URL::asset('vista/assets/plugins/pace/pace-theme-flash.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{URL::asset('vista/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{URL::asset('vista/assets/plugins/font-awesome/css/font-awesome.css')}}" rel="stylesheet" type="text/css" />
+   <link rel="shortcut icon" href="{{URL::asset('vista/assets/img/favicon.ico')}}" type="image/x-icon">
+<link rel="icon" href="{{URL::asset('vista/assets/img/favicon.ico')}}" type="image/x-icon">
+<link href="{{URL::asset('vista/assets/plugins/pace/pace-theme-flash.css')}}" rel="stylesheet" type="text/css" />
+<link href="{{URL::asset('vista/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+<link href="{{URL::asset('vista/assets/plugins/font-awesome/css/font-awesome.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{URL::asset('vista/assets/plugins/jquery-scrollbar/jquery.scrollbar.css')}}" rel="stylesheet" type="text/css" media="screen" />
     <link href="{{URL::asset('vista/assets/plugins/select2/css/select2.min.css')}}" rel="stylesheet')}}" type="text/css" media="screen" />
     <link href="{{URL::asset('vista/assets/plugins/switchery/css/switchery.min.css')}}" rel="stylesheet" type="text/css" media="screen" />
@@ -39,32 +38,34 @@
         <!-- BEGIN SIDEBAR MENU ITEMS-->
         <ul class="menu-items">
           <li class="m-t-30 ">
-            <a href="{{route('path_home')}}" >INICIO              
+            <a href="{{route('path_home')}}" >INICIO             
               </a>          
-          </li>
+     <span class="icon-thumbnail"><i class="pg  pg-home"></i> </span>
                   
-          
+        
               <li class="">
-                <a href="{{route('path_elemento')}}">Elementos</a>
-                <span class="icon-thumbnail">E</span>
+                <a href="{{route('path_elemento')}}">ELEMENTOS</a>
+               <span class="icon-thumbnail"><i class="pg  pg-laptop"></i> </span>
               </li>
               <li class="">
-                <a href="{{route('path_laboratorio')}}">Laboratorios</a>
-                <span class="icon-thumbnail">L</span>
+                <a href="{{route('path_laboratorio')}}">LABORATORIOS</a>
+                <span class="icon-thumbnail"><i class="fa fa-hospital-o"></i> </span>
               </li>
               <li class="">
-                <a href="{{route('path_promedia')}}">Promedia</a>
-                <span class="icon-thumbnail">P</span>
+                <a href="{{route('path_promedia')}}">PROMEDIA</a>
+                       <span class="icon-thumbnail"><i class="fa  fa-camera"></i> </span>
               </li>           
          <li class="">
-            <a href="{{route('path_politica')}}">Politicas </a>
-            <span class="icon-thumbnail">P&P</span>
+            <a href="{{route('path_politica')}}">POLITICAS</a>
+             <span class="icon-thumbnail"><i class="fa  fa-file-text"></i> </span>
+          
             
           </li>
           <li class="">
-              <a href="{{route('path_contacto')}}"> Contacto </a>
-             <span class="icon-thumbnail">C</span>
-            
+              <a href="{{route('path_contacto')}}"> CONTACTO </a>
+              <span class="icon-thumbnail"><i class="fa   fa-comments-o
+            "></i> </span>
+          
           </li>
           
 
@@ -84,7 +85,7 @@
               <span class="font-montserrat">BD Ingenieria de sistemas </span>.<br>
               <span class="hint-text">Copyright &copy; 2018</span><br>
               <span class="hint-text">All rights reserved. </span><br>
-              <span class="sm-block"><a href="#" class="m-l-10 m-r-10">UFPS</a> <span class="muted">|</span> <a href="#" class="m-l-10">Ing de Sistemas</a></span>
+              <span class="sm-block"><a href="https://ww2.ufps.edu.co/" target="_blank" class="m-l-10 m-r-10">UFPS</a> <span class="muted">|</span> <a href="http://ingsistemas.ufps.edu.co/"  target="_blank" class="m-l-10">Ing de Sistemas</a></span>
             </p>
            
            
@@ -166,6 +167,8 @@
         <!-- END COPYRIGHT -->
       </div>
       <!-- END PAGE CONTENT WRAPPER -->
+
+      
     </div>
    
     <script src="{{URL::asset('vista/assets/plugins/feather-icons/feather.min.js')}}" type="text/javascript"></script>
@@ -204,6 +207,24 @@
     <!-- BEGIN PAGE LEVEL JS -->
     <script src="{{URL::asset('vista/assets/js/dashboard.js')}}" type="text/javascript"></script>
     <script src="{{URL::asset('vista/assets/js/scripts.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/js/form_wizard.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/js/scripts.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/bootstrap3-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/jquery-autonumeric/autoNumeric.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/dropzone/dropzone.min.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/jquery-inputmask/jquery.inputmask.min.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/bootstrap-form-wizard/js/jquery.bootstrap.wizard.min.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/jquery-validation/js/jquery.validate.min.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/summernote/js/summernote.min.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/moment/moment.min.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/bootstrap-daterangepicker/daterangepicker.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js')}}" type="text/javascript"></script>
+    
+    
+   
+    
     <!-- END PAGE LEVEL JS -->
   </body>
 </html>

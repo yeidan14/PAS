@@ -14,13 +14,15 @@ class CreatePersonasTable extends Migration
     public function up()
     {
         Schema::create('personas', function (Blueprint $table) {
-            $table->integer('codigo',11)->primary();
-            $table->integer('tipo_persona',2)->primary();            
-            $table->string('documento',13);
+            $table->string('codigo',10)->primary();
             $table->string('nombre',100);
-            $table->string('carrera',150);
+            $table->string('apellidos',100);
+            $table->string('correo',40);
+            $table->string('correo',40);
+            $table->integer('tipo_persona')->usigned();
             $table->timestamps();
-                  
+            $table->foreing('tipo_persona')->references('id_tipo')->on('tipo_persona');
+            
         });
     }
 

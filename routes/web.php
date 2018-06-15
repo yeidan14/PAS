@@ -37,9 +37,9 @@ Route::get('/promedia',[
     'uses' => 'lab_controller@promedia',
     'as' => 'path_promedia',
 ]);
-Route::get('/politicas',[
-    'uses' => 'lab_controller@politicas',
-    'as' => 'path_politica',
+Route::get('/prestamos',[
+    'uses' => 'lab_controller@prestamo',
+    'as' => 'path_prestamo',
 ]);
 Route::get('/contacto',[
     'uses' => 'lab_controller@contacto',

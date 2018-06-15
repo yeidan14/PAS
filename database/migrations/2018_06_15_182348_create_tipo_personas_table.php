@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLaboratoriosTable extends Migration
+class CreateTipoPersonasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateLaboratoriosTable extends Migration
      */
     public function up()
     {
-        Schema::create('laboratorios', function (Blueprint $table) {
-            $table->i2('id');
+        Schema::create('tipo_personas', function (Blueprint $table) {
+            $table->increments('id_tipo')->primary();
+            $table->string('nombre',50)->uique();
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateLaboratoriosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('laboratorios');
+        Schema::dropIfExists('tipo_personas');
     }
 }

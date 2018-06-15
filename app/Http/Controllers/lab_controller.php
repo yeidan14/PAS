@@ -30,8 +30,8 @@ class lab_controller extends Controller
     { return view('promedia');
         
                            }
-      public function politicas()
-    { return view('politicas');
+      public function prestamo()
+    { return view('prestamo');
         
                            }
     

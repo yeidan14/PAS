@@ -53,11 +53,11 @@
               </li>
               <li class="">
                 <a href="{{route('path_promedia')}}">PROMEDIA</a>
-                       <span class="icon-thumbnail"><i class="fa  fa-camera"></i> </span>
+                       <span class="icon-thumbnail"><i class="fa  fa-video-camera"></i> </span>
               </li>           
          <li class="">
-            <a href="{{route('path_politica')}}">POLITICAS</a>
-             <span class="icon-thumbnail"><i class="fa  fa-file-text"></i> </span>
+            <a href="{{route('path_prestamo')}}">PRESTAMOS</a>
+             <span class="icon-thumbnail"><i class="fa   fa-exchange"></i> </span>
           
             
           </li>
@@ -154,7 +154,7 @@
           @yield('home')
           @yield('elemento')
           @yield('promedia')
-          @yield('politicas')
+          @yield('prestamo')
           @yield('contacto')
           
          
@@ -208,7 +208,7 @@
     <script src="{{URL::asset('vista/assets/js/dashboard.js')}}" type="text/javascript"></script>
     <script src="{{URL::asset('vista/assets/js/scripts.js')}}" type="text/javascript"></script>
     <script src="{{URL::asset('vista/assets/js/form_wizard.js')}}" type="text/javascript"></script>
-    <script src="{{URL::asset('vista/assets/js/scripts.js')}}" type="text/javascript"></script>
+    
     <script src="{{URL::asset('vista/assets/plugins/bootstrap3-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}" type="text/javascript"></script>
     <script src="{{URL::asset('vista/assets/plugins/jquery-autonumeric/autoNumeric.js')}}" type="text/javascript"></script>
     <script src="{{URL::asset('vista/assets/plugins/dropzone/dropzone.min.js')}}" type="text/javascript"></script>
@@ -221,9 +221,26 @@
     <script src="{{URL::asset('vista/assets/plugins/moment/moment.min.js')}}" type="text/javascript"></script>
     <script src="{{URL::asset('vista/assets/plugins/bootstrap-daterangepicker/daterangepicker.js')}}" type="text/javascript"></script>
     <script src="{{URL::asset('vista/assets/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js')}}" type="text/javascript"></script>
+    <!-- scrip para tablas-->
     
     
-   
+    
+    
+    
+    <script src="{{URL::asset('vista/assets/plugins/switchery/js/switchery.min.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/jquery-datatable/media/js/jquery.dataTables.min.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/jquery-datatable/extensions/TableTools/js/dataTables.tableTools.min.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/jquery-datatable/media/js/dataTables.bootstrap.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/jquery-datatable/extensions/Bootstrap/jquery-datatable-bootstrap.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/datatables-responsive/js/datatables.responsive.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/datatables-responsive/js/lodash.min.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/js/tables.js')}}" type="text/javascript"></script>
+    
+    
+  
+ 
+
+
     
     <!-- END PAGE LEVEL JS -->
   </body>

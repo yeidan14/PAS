@@ -188,8 +188,9 @@
                       <div class="form-group-attached">
                         <div class="form-group form-group-default">
                           <label>Justificacion <i class="fa fa-info text-complete m-l-5"></i>
+                          
                           </label>
-                          <input type="text" class="form-control" name="justificacion"><br><br>
+                          <textarea class="form-control" style="height: 50px;" id="msg" name="msg" required></textarea><br><br>
                         </div>
                         <div class="row clearfix">
                           <div class="col-md-6">

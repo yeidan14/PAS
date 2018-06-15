@@ -29,10 +29,10 @@
 					<a class="" data-toggle="tab" href="#tab2" role="tab"><i class="fa  fa-check-square-o tab-icon"></i> <span>PLANIFICA</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="" data-toggle="tab" href="#tab3" role="tab"><i class="fa fa-credit-card tab-icon"></i> <span>GRABA</span></a>
+					<a class="" data-toggle="tab" href="#tab3" role="tab"><i class="fa fa-camera tab-icon"></i> <span>GRABA</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="" data-toggle="tab" href="#tab4" role="tab"><i class="fa fa-check tab-icon"></i> <span>COMPARTE</span></a>
+					<a class="" data-toggle="tab" href="#tab4" role="tab"><i class="fa  fa-group tab-icon"></i> <span>COMPARTE</span></a>
 				</li>
 			</ul>
 			<!-- Tab panes -->
@@ -147,18 +147,7 @@
 								<form id="form-project" role="form" autocomplete="off" novalidate><br><br><br>
                       <p>Diligencie los siguientes campos</p>
                       <div class="form-group-attached">
-                        <div class="form-group form-group-default">
-                          <label>Seleccione el Elemento:</label>
-                          
-                              <select class="cs-select form-control cs-skin-slide" data-init-plugin="select-tipoelemento">
-                      <option value=" ">-------------------</option>
-                      <option value="1">LABORAROTRIO DE MOVIL</option>
-                      <option value="2">LABORATORIOS ....</option>
-                      <option value="3">LABORATORIO ....</option>
-                    </select>
-                         
-                          
-                        </div>
+                      
                         <br>
                         <div class="row clearfix">
                           <div class="col-md-6">
@@ -168,14 +157,15 @@
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <div class="form-group form-group-default">
+                            <div class="form-group form-group-default required">
                               <label>Apellidos</label>
-                              <input type="text" class="form-control" name="lastName">
+                              <input type="text" class="form-control" name="lastName" required>
                             </div>
                           </div> 
                              
                               
-                        </div>   <div class="row clearfix">
+                        </div>  
+                         <div class="row clearfix">
                           <div class="col-md-6">
                              <div class="form-group form-group-default required">
                               <label>Codigo</label>
@@ -183,9 +173,26 @@
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <div class="form-group form-group-default">
+                            <div class="form-group form-group-default required">
                               <label>Correo</label>
-                              <input type="email" class="form-control" name="email">
+                              <input type="email" class="form-control" name="email" required>
+                            </div>
+                          </div>
+                             
+                              
+                        </div>
+                         
+                         <div class="row clearfix">
+                          <div class="col-md-6">
+                             <div class="form-group form-group-default required">
+                              <label>Palabras Clave:</label>
+                              <input type="text" class="form-control" name="Codigo" required>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group form-group-default required">
+                              <label>Materia:</label>
+                              <input type="text" class="form-control" name="email" required>
                             </div>
                           </div>
                              
@@ -194,10 +201,10 @@
                       </div>
                       
                       <div class="form-group-attached">
-                        <div class="form-group form-group-default">
-                          <label>Justificacion <i class="fa fa-info text-complete m-l-5"></i>
+                        <div class="form-group form-group-default required">
+                          <label>Descripcion <i class="fa fa-info text-complete m-l-5"></i>
                           </label>
-                          <input type="text" class="form-control" name="justificacion"><br><br>
+                          <input type="text" class="form-control" name="descripcion" required><br><br>
                         </div>
                         <div class="row clearfix">
                           <div class="col-md-6">
@@ -205,10 +212,12 @@
                               <label>Dia</label>
                               <input  type="date" class="form-control date" name="startDate" required>
                             </div>
-                          </div><div class="col-md-6">
+                          </div>
+                          <div class="col-md-6 ">
+
                             <div class="form-group form-group-default required">
-                              <label>Cantidad de Elementos</label>
-                              <input  type="number" class="form-control date" name="startDate" max="30" required>
+                              <label>Entidad</label>
+                              <input  type="text" class="form-control date" name="startDate" max="30" required>
                             </div>
                           </div>
                           
@@ -220,13 +229,13 @@
                           <div class="col-md-6">
                             <div class="form-group form-group-default">
                               <label>Hora-Inici</label>
-                              <input id="inicio" type="time" class="form-control date" name="endDate">
+                              <input id="inicio" type="time" class="form-control date" name="endDate" required>
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group form-group-default">
                               <label>Hora-Fin</label>
-                              <input id="end-date" type="time" class="form-control date" name="endDate">
+                              <input id="end-date" type="time" class="form-control date" name="endDate" required>
                             </div>
                           </div>
                           
@@ -235,7 +244,7 @@
                       <br>
                       <div class="pull-left">
                         <div class="checkbox check-success  ">
-                          <input type="checkbox" checked="checked" value="1" id="checkbox-agree">
+                          <input type="checkbox" checked="checked" value="1" id="checkbox-agree" >
                           <label for="checkbox-agree">Acepta Terminos y condiciones ?
                           </label>
                         </div>
@@ -250,7 +259,13 @@
 				</div>
 				
 				<div class="tab-pane slide-left padding-20 sm-no-padding" id="tab4">
-					<h1>Thank you.</h1>
+					<h3>Entra a polimedia-play y comparte el video en uvirtual o plad ufps</h3>
+                    <p class="small hint-text">Entra y Comparte:</p>
+                    <a target="_blank" href="http://uvirtual.ufps.edu.co/ufpsvirtual/">
+                    <h1>UVIRTUAL UFPS</h1></a>
+                    <br>
+                    <a target="_blank" href="https://divisist2.ufps.edu.co/">
+                    <h1>PLAD UFPS</h1></a>
 				</div>
 				
 				<div class="wizard-footer padding-20 bg-master-light">

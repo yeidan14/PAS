@@ -1,11 +1,28 @@
 @extends('principal')
           @section('contacto')
+          
+          <div class="social-wrapper">
+            <div class="social " data-pages="social">
+              <!-- START JUMBOTRON -->
+              <div class="arriba" data-pages="parallax" data-social="cover">
+                <div class="cover-photo">
+                  <img alt="Cover photo" src="{{URL::asset('vista/assets/img/social/cover.jpg')}}" />
+                </div>
+                <div class=" container-fluid   container-fixed-lg sm-p-l-0 sm-p-r-0">
+                  <div class="inner">
+                    <div class="pull-bottom bottom-left m-b-40 sm-p-l-15">
+                      <h5 class="text-white no-margin">Pretsamos de Aula Sur</h5>
+                      <h1 class="text-white no-margin"><span class="semi-bold">PAS</span>| Contacto</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>             
+            </div>        
+          </div>
            <div class=" container-fluid   container-fixed-lg">
-            <!-- START BREADCRUMB -->
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Form layouts</li>
-            </ol>
+
+           
+           
             <!-- END BREADCRUMB -->
             <div class="row">
               <div class="col-xl-7 col-lg-6 ">
@@ -16,54 +33,38 @@
                       <div class="row clearfix">
                         <div class="col-md-6">
                           <div class="form-group form-group-default required">
-                            <label>First name</label>
+                            <label>NOMBRE</label>
                             <input type="text" class="form-control" name="firstName" required>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group form-group-default">
-                            <label>Last name</label>
+                            <label>APELLIDOS</label>
                             <input type="text" class="form-control" name="lastName" required>
                           </div>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-md-12">
-                          <div class="form-group form-group-default input-group">
-                            <div class="form-input-group">
-                              <label>Pages username</label>
-                              <input type="text" class="form-control" name="username" placeholder="yourname.pages.com (this can be changed later)" required>
-                            </div>
-                            <div class="input-group-addon d-flex ">
-                              .pages.com
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="form-group form-group-default">
-                            <label>Password</label>
-                            <input type="password" class="form-control" name="password" placeholder="Minimum of 4 characters." required>
-                          </div>
+                            <div class="form-group form-group-default">
+                                                       <label>MENSAJE</label>
+                                                       <textarea class="form-group form-group-default" style="height: 230px;" id="msg" name="msg" required></textarea>
+                                                       </div>
+
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-md-12">
                           <div class="form-group form-group-default">
                             <label>Email</label>
-                            <input type="email" class="form-control" name="email" placeholder="We’ll send your login details to this address" required>
+                            <input type="email" class="form-control" name="email" placeholder="expample@pages.com" required>
                           </div>
                         </div>
                       </div>
-                      <p class="pull-left">
-                        I agree to the <a href="#">Pages Terms</a> and <a href="#">Privacy</a>.
-                      </p>
-                      <p class="pull-right">
-                        <a href="#">Help? Contact Support</a>
-                      </p>
+                      
+                      
                       <div class="clearfix"></div>
-                      <button class="btn btn-primary" type="submit">Create a new account</button>
+                      <button class="btn btn-primary" type="submit">ENVIAR MENSAJE</button>
                     </form>
                   </div>
                 </div>
@@ -72,20 +73,26 @@
               <div class="col-xl-5 col-lg-6">
                 <!-- START card -->
                 <div class="card card-transparent">
-                  <div class="card-header ">
-                    <div class="card-title">Validation
-                    </div>
-                  </div>
+                 
                   <div class="card-block">
-                    <h3>Showcase and guide users with a <br>
-							better User Interface &amp; Experience.</h3>
-                    <p>Forms are one of the most important components
-                      <br> when it comes to a dashboard. Recognizing that fact, users are
-                      <br>able work in a maximum content width.</p>
+                                 
+                   <h2>DIRECCION<br></h2>
+                    <p>Avenida Gran Colombia No. 12E-96 Barrio Colsag, Cúcuta, Colombia<br>
+
+  <h2>HORARIO DE ATENCION <br></h2>
+                    <p>
+Horario : 9 am a 5 pm<br>
+Horario no laborable : 12 m a 2 pm<br> 
+                   
+ <h2>CONTACTO<br></h2>
+                    <p>
+Teléfono (57) 7 5776655 Extensiones 201 y 203<br>
+Correo electrónico: ingsistemas@ufps.edu.co
+                   
+</p>
                     <br>
-                    <p class="small hint-text m-t-5">VIA senior product manager
-                      <br> for UI/UX at REVOX</p>
-                    <button class="btn btn-primary btn-cons">More</button>
+                    
+                    
                   </div>
                 </div>
                 <!-- END card -->

@@ -15,7 +15,7 @@ class CreateTipoPersonasTable extends Migration
     {
         Schema::create('tipo_personas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre',50)->uique();
+            $table->string('nombre',50);
             $table->timestamps();
         });
     }

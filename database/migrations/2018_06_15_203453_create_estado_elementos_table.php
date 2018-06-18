@@ -15,7 +15,7 @@ class CreateEstadoElementosTable extends Migration
     {
         Schema::create('estado_elementos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
+            $table->string('nombre',50);
             $table->timestamps();
         });
     }

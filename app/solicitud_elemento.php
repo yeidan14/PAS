@@ -8,7 +8,7 @@ class solicitud_elemento extends Model
 {
     //
          protected $table = 'solicitud_elementos';
-     protected $fillable = ['id', 'id_elemento','id_persona','nombres','apellidos','codigo','justificacion','fecha','cantidad_elemento','hora_inicio','hora_fin','id_esolicitud'];
+     protected $fillable = ['id', 'id_elemento','id_persona','justificacion','fecha','cantidad_elemento','hora_inicio','hora_fin','id_esolicitud'];
     
     //relacion persona
     public function persona()

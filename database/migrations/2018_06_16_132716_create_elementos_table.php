@@ -17,7 +17,7 @@ class CreateElementosTable extends Migration
             $table->increments('id');
             $table->string('sn');
             $table->string('nombre',30);
-            $table->string('descripcion', 140);
+            $table->string('descripcion',200);
             $table->integer('id_laboratorio')->unsigned();
             $table->integer('id_estado')->unsigned();
             $table->timestamps();

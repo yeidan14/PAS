@@ -16,16 +16,13 @@ class CreateSolicitudPromediasTable extends Migration
         Schema::create('solicitud_promedias', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_persona')->unsigned();
-            $table->string('nombres',50);
-            $table->string('apellidos',50);
-            $table->string('codigo',10);
             $table->string('descripcion',255);
             $table->date('fecha');
-            $table->string('hora_inicio');
-            $table->string('hora_fin');
+            $table->time('hora_inicio');
+            $table->time('hora_fin');
             $table->string('palabras_clave',100);
-            $table->string('materia',50);
-            $table->string('entidad',50);
+            $table->string('materia',100);
+            $table->string('entidad',100);
             $table->integer('id_esolicitud')->unsigned();            
             $table->timestamps();
             $table->foreign('id_persona')->references('id')->on('personas');

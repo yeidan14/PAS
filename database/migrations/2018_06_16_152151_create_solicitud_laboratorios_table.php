@@ -17,13 +17,10 @@ class CreateSolicitudLaboratoriosTable extends Migration
             $table->increments('id');
             $table->integer('id_laboratorio')->unsigned();
             $table->integer('id_persona')->unsigned();
-            $table->string('nombres',50);
-            $table->string('apellidos',50);
-            $table->string('codigo',10);
             $table->string('justificacion',255);
             $table->date('fecha');
-            $table->string('hora_inicio');
-            $table->string('hora_fin');
+            $table->time('hora_inicio');
+            $table->time('hora_fin');
             $table->integer('id_esolicitud')->unsigned();            
             $table->timestamps();
             $table->foreign('id_laboratorio')->references('id')->on('laboratorios');

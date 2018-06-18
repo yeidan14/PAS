@@ -55,7 +55,7 @@
         
           <img src="{{URL::asset('vista/assets/img/logohorizontal.png')}}" alt="logo" data-src=" {{URL::asset('vista/assets/img/logohorizontal.png')}}" data-src-retina=" {{URL::asset('vista/assets/img/logohorizontal.png')}}"  height="100">
           <!-- START Login Form -->
-          <form id="form-login" class="p-t-15" role="form" action="index.php">
+          <form id="form-login" class="p-t-15" role="form" method="POST" action="{{route('path_login')}}">
             <!-- START Form Control-->
             <div class="form-group form-group-default">
               <label>Usuario</label>
@@ -78,7 +78,7 @@
               <div class="col-md-6 no-padding sm-p-l-10">
                 
                   
-                  <label for="checkbox1">No tienes cuenta ?</label>
+                  <label for="checkbox1">No tienes cuenta ? --> </label>
                
               </div>
               <div class="col-md-6 d-flex align-items-center justify-content-end">

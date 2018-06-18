@@ -45,3 +45,8 @@ Route::get('/contacto',[
     'uses' => 'lab_controller@contacto',
     'as' => 'path_contacto',
 ]);
+
+Route::get('login',[
+    'uses' => 'login_Controller@login',
+    'as' => 'path_login',
+]);

@@ -10,7 +10,7 @@ class solicitud_laboratorio extends Model
     
     
          protected $table = 'solicitud_laboratorios';
-     protected $fillable = ['id','id_persona', 'nombres','apellidos','codigo','justificacion','fecha','hora_inicio','hora_fin','id_esolicitud'];
+     protected $fillable = ['id','id_persona','justificacion','fecha','hora_inicio','hora_fin','id_esolicitud'];
     
     
     public function laboratorio()

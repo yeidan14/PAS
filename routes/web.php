@@ -14,6 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/admin', function () {
+    return view('admin');
+});
 Route::get('/home', [
     'uses' => 'lab_controller@home',
     'as' => 'path_home',
@@ -46,7 +51,4 @@ Route::get('/contacto',[
     'as' => 'path_contacto',
 ]);
 
-Route::get('login',[
-    'uses' => 'login_Controller@login',
-    'as' => 'path_login',
-]);
+Route::post('login', 'Auth\loginController@login')->name('login');

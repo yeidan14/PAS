@@ -12,14 +12,15 @@ use Validator;
 
 class login_Controller extends Controller
 {
-     public function showLoginForm()
+  
+    public function showLoginForm()
     {
         return view("welcome");
     }
 
     public function showSite()
     {
-        return view("home");
+        return view("vistas.site");
     }
 
    
@@ -34,7 +35,7 @@ class login_Controller extends Controller
 
         ];
 
-        $validator = Validator::make($request->all(), ['codigo' => 'required', 'password' => 'required'], $messages);
+        $validator = Validator::make($request->all(), ['email' => 'required', 'pass' => 'required'], $messages);
 
         if ($validator->fails()) {
 
@@ -71,4 +72,13 @@ class login_Controller extends Controller
         }
 
     }
+
+    public function renewUser(Request $request)
+    {
+
+        $userRenew = User::where('email', $request->email);
+        $userRenew->update(['password' => bcrypt($request->pass_new)]);
+        return view('vistas.site');
+    }
+
 }

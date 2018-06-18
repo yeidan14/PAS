@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta charset="utf-8" />
-    <title>PRESTAMO DE SALAS DE AULA SUR</title>
+    <title>ADMINIDTRADOR PAS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
     <link href="{{URL::asset('vista/assets/plugins/pace/pace-theme-flash.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{URL::asset('vista/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
@@ -36,12 +36,12 @@
       <div class="bg-pic">
         <!-- START Background Pic-->
         
-        <img src="{{URL::asset('vista/assets/img/demo/fondo.jpg')}}" data-src="{{URL::asset('vista/assets/img/demo/fondo.jpg')}}" data-src-retina="{{URL::asset('vista/assets/img/demo/fondo.jpg')}}" alt="" class="lazy">
+        <img src="{{URL::asset('vista/assets/img/demo/admin.jpg')}}" data-src="{{URL::asset('vista/assets/img/demo/admin.jpg')}}" data-src-retina="{{URL::asset('vista/assets/img/demo/admin.jpg')}}" alt="" class="lazy">
         <!-- END Background Pic-->
         <!-- START Background Caption-->
         <div class="bg-caption pull-bottom sm-pull-bottom text-white p-l-20 m-b-20">
           <h2 class="semi-bold text-white">
-					Bienvenido al PRESTAMOS DE SALA DEL TERCER PISO</h2>
+					BIENVENIDO ADMINIDTRADOR</h2>
           <p class="small">
             Bases de Datos Ingenieria de sistemas UFPS © 2018
           </p>
@@ -55,42 +55,26 @@
         
           <img src="{{URL::asset('vista/assets/img/logohorizontal.png')}}" alt="logo" data-src=" {{URL::asset('vista/assets/img/logohorizontal.png')}}" data-src-retina=" {{URL::asset('vista/assets/img/logohorizontal.png')}}"  height="100">
           <!-- START Login Form -->
-          <form id="form-login" class="p-t-15" role="form" method="POST" action="{{route('login')}}">
+          <form id="form-login" class="p-t-15" role="form" method="POST" action="{{route('path_login')}}">
             <!-- START Form Control-->
-            <div class="form-group form-group-default{{ $errors->has('codigo') ? ' has-error' : '' }}">
-              <label>Usuario</label>
+            <div class="form-group form-group-default">
+              <label>Administrador</label>
               <div class="controls">
-                <input type="text" name="codigo" placeholder="Ingrese su codigo" class="form-control" value="{{old('codigo') }} required>
+                <input type="text" name="username" placeholder="Ingrese su codigo" class="form-control" required>
               </div>
             </div>
             <!-- END Form Control-->
             <!-- START Form Control-->
-            <div class="form-group form-group-default{{ $errors->has('clave') ? ' has-error' : '' }}">
+            <div class="form-group form-group-default">
               <label>Contraseña</label>
               <div class="controls">
-                <input type="clave" class="form-control" name="password" placeholder="Ingrese su Contraseña" required>
-                @if ($errors->has('clave'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('clave') }}</strong>
-                                    </span>
-                                @endif
+                <input type="password" class="form-control" name="password" placeholder="Ingrese su Contraseña" required>
               </div>
             </div>
             <div>
                 <br><br>
             </div>
-            <div class="row">
-              <div class="col-md-6 no-padding sm-p-l-10">
-                
-                  
-                  <label for="checkbox1">No tienes cuenta ? --> </label>
-               
-              </div>
-              <div class="col-md-6 d-flex align-items-center justify-content-end">
-                <a href="{{route('path_registrar')}}" class="text-info small">Registrate</a>
-              </div>
-            </div>
-            <!-- END Form Control-->
+                        <!-- END Form Control-->
             <button class="btn btn-primary btn-cons m-t-10" type="submit">INGRESAR</button>
           </form>
           <div class="pull-bottom sm-pull-bottom">

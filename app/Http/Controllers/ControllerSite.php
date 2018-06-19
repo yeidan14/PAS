@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class sitie_Controller extends Controller
+class ControllerSite extends Controller
 {
     public function showSite()
     {
-        return view('home');
+        return view('vistas.site');
     }
 
     public function logoutUser()
@@ -18,4 +18,5 @@ class sitie_Controller extends Controller
         return redirect()->route("auth_index_path");
 
     }
+
 }

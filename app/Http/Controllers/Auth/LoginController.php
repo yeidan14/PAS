@@ -17,6 +17,10 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
+ public function showLoginForm()
+    {
+        return view("auth.login");
+    }
 
     use AuthenticatesUsers;
 
@@ -25,6 +29,7 @@ class LoginController extends Controller
      *
      * @var string
      */
+    // protected $redirectTo = '/home';
     protected $redirectTo = '/home';
 
     /**
@@ -37,3 +42,4 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 }
+

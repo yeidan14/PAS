@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\persona;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,12 +15,12 @@ class ControllerLogin extends Controller
 
     public function showLoginForm()
     {
-        return view("vistas.login");
+        return view("welcome");
     }
 
     public function showSite()
     {
-        return view("vistas.site");
+        return view("home");
     }
 
    
@@ -29,13 +29,13 @@ class ControllerLogin extends Controller
 
         $messages = [
             'codigo.required' => 'Por favor complete el campo codigo',
-            'password.required'  => 'Por favor ingrese una contraseña',
+            'clave.required'  => 'Por favor ingrese una contraseña',
             'email.exists'   => 'El correo ingresado no se encuentra en nuestra base de datos, por favor verifique si está correcto',
-            'pass.exists'    => 'La contraseña asociada a ese correo no es correcta',
+            'clave.exists'    => 'La contraseña asociada a ese correo no es correcta',
 
         ];
 
-        $validator = Validator::make($request->all(), ['email' => 'required', 'pass' => 'required'], $messages);
+        $validator = Validator::make($request->all(), ['codigo' => 'required', 'clave' => 'required'], $messages);
 
         if ($validator->fails()) {
 
@@ -45,7 +45,7 @@ class ControllerLogin extends Controller
 
         } else {
 
-            $validatorEmail = Validator::make($request->all(), ['email' => 'exists:users,email'], $messages);
+            $validatorEmail = Validator::make($request->all(), ['codigo' => 'exists:personas,codigo'], $messages);
 
             if ($validatorEmail->fails()) {
 
@@ -55,14 +55,14 @@ class ControllerLogin extends Controller
 
             } else {
 
-                if (Auth::attempt(['email' => $request->email, 'password' => $request->pass])) {
+                if (Auth::attempt(['codigo' => $request->email, 'clave' => $request->pass])) {
 
-                    return view('vistas.site');
+                    return view('home');
 
                 } else {
 
                     return redirect()->route('auth_index_path')
-                        ->withErrors('Los datos no coinciden por favor verifique el email o la contraseña')
+                        ->withErrors('Los datos no coinciden por favor verifique el codigo o la contraseña')
                         ->withInput();
 
                 }

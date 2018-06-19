@@ -60,7 +60,7 @@
             <div class="form-group form-group-default{{ $errors->has('codigo') ? ' has-error' : '' }}">
               <label>Usuario</label>
               <div class="controls">
-                <input type="text" name="codigo" placeholder="Ingrese su codigo" class="form-control" value="{{old('codigo') }} required>
+                <input type="text" name="codigo" placeholder="Ingrese su codigo" class="form-control" value="{{old('codigo') }}" required>
               </div>
             </div>
             <!-- END Form Control-->
@@ -68,7 +68,7 @@
             <div class="form-group form-group-default{{ $errors->has('clave') ? ' has-error' : '' }}">
               <label>Contraseña</label>
               <div class="controls">
-                <input type="clave" class="form-control" name="password" placeholder="Ingrese su Contraseña" required>
+                <input type="password" class="form-control" name="clave" placeholder="Ingrese su Contraseña" required>
                 @if ($errors->has('clave'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('clave') }}</strong>

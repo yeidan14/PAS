@@ -51,4 +51,16 @@ Route::get('/contacto',[
     'as' => 'path_contacto',
 ]);
 
-Route::post('login', 'Auth\loginController@login')->name('login');
+Route::get('/loginUser', [
+
+    'uses' => 'ControllerLogin@showLoginForm',
+    'as'   => 'auth_index_path',
+
+]);
+
+Auth::routes();
+
+
+
+
+

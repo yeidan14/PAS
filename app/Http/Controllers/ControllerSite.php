@@ -8,7 +8,7 @@ class ControllerSite extends Controller
 {
     public function showSite()
     {
-        return view('vistas.site');
+        return view('user');
     }
 
     public function logoutUser()

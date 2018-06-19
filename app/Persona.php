@@ -9,7 +9,7 @@ class persona extends Model
     
      protected $table = 'personas';
     
-     protected $fillable = ['id','codigo','nombre','apellidos','correo','clave','tipo_persona'];
+     protected $fillable = ['id','codigo','nombre','apellidos','email','passsword','tipo_persona'];
     //relacion tipo_persona
     public function tipopersona()
         {

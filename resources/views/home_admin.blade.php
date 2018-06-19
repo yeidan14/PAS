@@ -19,6 +19,11 @@
     <link href="{{URL::asset('vista/assets/plugins/bootstrap-datepicker/css/datepicker3.css')}}" rel="stylesheet" type="text/css" media="screen">
     <link href="{{URL::asset('vista/assets/plugins/mapplic/css/mapplic.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{URL::asset('vista/assets/css/dashboard.widgets.css')}}" rel="stylesheet" type="text/css" media="screen" />
+    <link href="{{URL::asset('vista/assets/plugins/switchery/css/switchery.min.css')}}" rel="stylesheet" type="text/css" media="screen" />
+    <link href="{{URL::asset('assets/plugins/bootstrap3-wysihtml5/bootstrap3-wysihtml5.min.css')}}" rel="stylesheet" type="text/css" media="screen" />
+    <link href="{{URL::asset('assets/assets/plugins/jquery-menuclipper/jquery.menuclipper.css')}}" rel="stylesheet" type="text/css" media="screen" />
+
+
     <link href="{{URL::asset('vista/pages/css/pages-icons.css')}}" rel="stylesheet" type="text/css">
     <link class="main-stylesheet" href="{{URL::asset('vista/pages/css/themes/light.css')}}"
 		  rel="stylesheet" type="text/css" />
@@ -38,31 +43,17 @@
         <!-- BEGIN SIDEBAR MENU ITEMS-->
         <ul class="menu-items">
           <li class="m-t-30 ">
-            <a href="{{route('path_user')}}" >INICIO             
+            <a href="{{route('path_useradmin')}}" >INICIO             
               </a>          
      <span class="icon-thumbnail"><i class="pg  pg-home"></i> </span>
                   
         
               <li class="">
-                <a href="{{route('path_elemento')}}">ELEMENTOS</a>
+                <a href="{{route('path_adminsolicitud')}}">SOLICITUDES</a>
                <span class="icon-thumbnail"><i class="pg  pg-laptop"></i> </span>
               </li>
-              <li class="">
-                <a href="{{route('path_laboratorio')}}">PROMEDIA</a>
-                <span class="icon-thumbnail"><i class="fa fa-hospital-o"></i> </span>
-              </li>
-              <li class="">
-                <a href="{{route('path_promedia')}}">LABORATORIOS</a>
-                       <span class="icon-thumbnail"><i class="fa  fa-video-camera"></i> </span>
-              </li>           
-         <li class="">
-            <a href="{{route('path_prestamo')}}">ENVIAR MENSAJE</a>
-             <span class="icon-thumbnail"><i class="fa   fa-exchange"></i> </span>
-          
-            
-          </li>
           <li class="">
-              <a href="{{route('path_contacto')}}">  </a>
+              <a href="{{route('path_correoadmin')}}"> CORREO </a>
               <span class="icon-thumbnail"><i class="fa   fa-comments-o
             "></i> </span>
           
@@ -150,13 +141,9 @@
         <div  class="content " >
         
           
-          @yield('laboratorio')
-          @yield('home')
-          @yield('elemento')
-          @yield('promedia')
-          @yield('prestamo')
-          @yield('contacto')
-          
+          @yield('useradmin')
+          @yield('solicitudesadmin')
+          @yield('correoadmin')
          
         </div>
         <!-- END PAGE CONTENT -->
@@ -235,11 +222,15 @@
     <script src="{{URL::asset('vista/assets/plugins/datatables-responsive/js/datatables.responsive.js')}}" type="text/javascript"></script>
     <script src="{{URL::asset('vista/assets/plugins/datatables-responsive/js/lodash.min.js')}}" type="text/javascript"></script>
     <script src="{{URL::asset('vista/assets/js/tables.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/switchery/js/switchery.min.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/bootstrap3-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('vista/assets/plugins/jquery-menuclipper/jquery.menuclipper.js')}}" type="text/javascript"></script>
     
     
   
  
-
+      
+    
 
     
     <!-- END PAGE LEVEL JS -->

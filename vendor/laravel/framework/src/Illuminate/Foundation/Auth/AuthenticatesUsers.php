@@ -88,7 +88,7 @@ trait AuthenticatesUsers
      */
     protected function credentials(Request $request)
     {
-        return $request->only($this->username(), 'password');
+        return $request->only($this->username(), 'clave');
     }
 
     /**
@@ -141,7 +141,7 @@ trait AuthenticatesUsers
      */
     public function username()
     {
-        return 'email';
+        return 'correo';
     }
 
     /**

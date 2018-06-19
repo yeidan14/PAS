@@ -16,8 +16,8 @@ class lab_controller extends Controller
     { return view('laboratorio');
         
                            }
-    public function home()
-    { return view('home');
+    public function user()
+    { return view('user');
         
                            }
     
@@ -40,6 +40,31 @@ class lab_controller extends Controller
         
                            }
     
+       public function admin()
+    { return view('admin');
+        
+                           }
+    
+      public function adminpanel()
+    { return view('useradmin');
+        
+                           }
+
+    public function useradmin()
+    { return view('useradmin');
+        
+                           }
+
+ public function adminsolicitud()
+    { return view('solicitudes');
+        
+                           } 
+
+
+ public function correoadmin()
+    { return view('correo');
+        
+                           }    
     
     
 }

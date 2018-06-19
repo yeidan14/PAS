@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
+
     /*
     |--------------------------------------------------------------------------
     | Login Controller
@@ -16,10 +17,11 @@ class LoginController extends Controller
     | redirecting them to your home screen. The controller uses a trait
     | to conveniently provide its functionality to your applications.
     |
-    */
- public function showLoginForm()
+     */
+
+    public function showLoginForm()
     {
-        return view("auth.login");
+        return view("welcome");
     }
 
     use AuthenticatesUsers;
@@ -30,7 +32,7 @@ class LoginController extends Controller
      * @var string
      */
     // protected $redirectTo = '/home';
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/user';
 
     /**
      * Create a new controller instance.
@@ -42,4 +44,3 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 }
-

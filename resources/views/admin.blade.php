@@ -41,7 +41,7 @@
         <!-- START Background Caption-->
         <div class="bg-caption pull-bottom sm-pull-bottom text-white p-l-20 m-b-20">
           <h2 class="semi-bold text-white">
-					BIENVENIDO ADMINIDTRADOR</h2>
+					BIENVENIDO ADMINISTRADOR</h2>
           <p class="small">
             Bases de Datos Ingenieria de sistemas UFPS © 2018
           </p>
@@ -55,7 +55,7 @@
         
           <img src="{{URL::asset('vista/assets/img/logohorizontal.png')}}" alt="logo" data-src=" {{URL::asset('vista/assets/img/logohorizontal.png')}}" data-src-retina=" {{URL::asset('vista/assets/img/logohorizontal.png')}}"  height="100">
           <!-- START Login Form -->
-          <form id="form-login" class="p-t-15" role="form" method="POST" action="{{route('path_login')}}">
+          <form id="form-login" class="p-t-15" role="form" method="POST">
             <!-- START Form Control-->
             <div class="form-group form-group-default">
               <label>Administrador</label>

@@ -19,8 +19,8 @@ $factory->define(App\persona::class, function (Faker  $faker) {
         'codigo'=> $faker->numberBetween($min=10000,$max=90000),
         'nombre'=>$faker->firstName,
         'apellidos'=>$faker->lastName,
-        'correo'=>$faker->email,
-        'clave'=>$faker->password,
+        'email'=>$faker->email,
+        'password'=>$faker->password,
         'tipo_persona'=> $faker->numberBetween($min=1,$max=2),        
                ];
 });

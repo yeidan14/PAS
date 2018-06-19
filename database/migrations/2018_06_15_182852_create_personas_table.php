@@ -18,8 +18,8 @@ class CreatePersonasTable extends Migration
             $table->string('codigo',10)->unique();
             $table->string('nombre',100);
             $table->string('apellidos',100);
-            $table->string('correo',40);
-            $table->string('clave',255);
+            $table->string('email',40);
+            $table->string('password',255);
             $table->integer('tipo_persona')->unsigned();
             $table->timestamps();
             $table->foreign('tipo_persona')->references('id')->on('tipo_personas');

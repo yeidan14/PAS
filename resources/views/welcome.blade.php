@@ -55,12 +55,24 @@
         
           <img src="{{URL::asset('vista/assets/img/logohorizontal.png')}}" alt="logo" data-src=" {{URL::asset('vista/assets/img/logohorizontal.png')}}" data-src-retina=" {{URL::asset('vista/assets/img/logohorizontal.png')}}"  height="100">
           <!-- START Login Form -->
-          <form id="form-login" class="p-t-15" role="form" method="POST" action="{{route('login')}}">
+        
+        
+          <form id="form-login" class="p-t-15" role="form" method="POST" 
+          action="{{ route('login') }}">
+                        @csrf
+                        
             <!-- START Form Control-->
-            <div class="form-group form-group-default{{ $errors->has('codigo') ? ' has-error' : '' }}">
+            <div class="form-group form-group-default{{ $errors->has('correo') ? ' has-error' : '' }}">
               <label>Usuario</label>
               <div class="controls">
-                <input type="text" name="codigo" placeholder="Ingrese su codigo" class="form-control" value="{{old('codigo') }}" required>
+                <input type="numb" name="correo" placeholder="Ingrese su codigo" class="form-control" value="{{old('correo') }}" required>
+
+
+                 @if ($errors->has('correo'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('correo') }}</strong>
+                                    </span>
+                                @endif
               </div>
             </div>
             <!-- END Form Control-->

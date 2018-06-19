@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\persona;
+use App\Persona;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,22 +20,26 @@ class ControllerLogin extends Controller
 
     public function showSite()
     {
-        return view("home");
+        return view("user");
     }
 
-   
+    public function forgottenPass()
+    {
+        return view('vistas.forgottenPass');
+    }
+
     public function site(Request $request)
     {
 
         $messages = [
-            'codigo.required' => 'Por favor complete el campo codigo',
-            'clave.required'  => 'Por favor ingrese una contraseña',
+            'email.required' => 'Por favor complete el campo email',
+            'password.required'  => 'Por favor ingrese una contraseña',
             'email.exists'   => 'El correo ingresado no se encuentra en nuestra base de datos, por favor verifique si está correcto',
-            'clave.exists'    => 'La contraseña asociada a ese correo no es correcta',
+            'password.exists'    => 'La contraseña asociada a ese correo no es correcta',
 
         ];
 
-        $validator = Validator::make($request->all(), ['codigo' => 'required', 'clave' => 'required'], $messages);
+        $validator = Validator::make($request->all(), ['email' => 'required', 'password' => 'required'], $messages);
 
         if ($validator->fails()) {
 
@@ -45,7 +49,7 @@ class ControllerLogin extends Controller
 
         } else {
 
-            $validatorEmail = Validator::make($request->all(), ['codigo' => 'exists:personas,codigo'], $messages);
+            $validatorEmail = Validator::make($request->all(), ['email' => 'exists:personas,email'], $messages);
 
             if ($validatorEmail->fails()) {
 
@@ -55,14 +59,14 @@ class ControllerLogin extends Controller
 
             } else {
 
-                if (Auth::attempt(['codigo' => $request->email, 'clave' => $request->pass])) {
+                if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
 
-                    return view('home');
+                    return view('user');
 
                 } else {
 
                     return redirect()->route('auth_index_path')
-                        ->withErrors('Los datos no coinciden por favor verifique el codigo o la contraseña')
+                        ->withErrors('Los datos no coinciden por favor verifique el email o la contraseña')
                         ->withInput();
 
                 }
@@ -76,9 +80,9 @@ class ControllerLogin extends Controller
     public function renewUser(Request $request)
     {
 
-        $userRenew = User::where('email', $request->email);
+        $userRenew = Persona::where('email', $request->email);
         $userRenew->update(['password' => bcrypt($request->pass_new)]);
-        return view('vistas.site');
+        return view('user');
     }
 
 }

@@ -66,5 +66,24 @@ class lab_controller extends Controller
         
                            }    
     
+     public function home()
+    { return view('welcome');
+        
+                           }    
+    
+    
+
+     public function name()
+    { return view('name');
+        
+                           }    
+    
+
+
+     public function alertalogin()
+    { return view('alertalogin');
+        
+                           }    
+    
     
 }

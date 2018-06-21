@@ -32,20 +32,22 @@
       <div class="d-flex justify-content-center flex-column full-height ">
         <img src="{{URL::asset('vista/assets/img/logohorizontal.png')}}" alt="logo" data-src=" {{URL::asset('vista/assets/img/logohorizontal.png')}}" data-src-retina=" {{URL::asset('vista/assets/img/logohorizontal.png')}}" width="500"  >
         <h3>Ingrese los datos necesarios para su registro</h3>
+        <div>@yield('registererror')</div>
         <p>
         </p>
-        <form id="form-register" class="p-t-15" role="form" action="index.php">
+        <form id="form-register" method="post" class="p-t-15" role="form" action="{{route('path_postregistro')}}">
+          @csrf
           <div class="row">
             <div class="col-md-6">
               <div class="form-group form-group-default">
                 <label>Nombres</label>
-                <input type="text" name="fname" placeholder="Ingrese sus nombres" class="form-control" required>
+                <input type="text" name="nombre" placeholder="Ingrese sus nombres" class="form-control" required>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group form-group-default">
                 <label>Apellidos</label>
-                <input type="text" name="lname" placeholder="Ingrese sus apellidos" class="form-control" required>
+                <input type="text" name="apellidos" placeholder="Ingrese sus apellidos" class="form-control" required>
               </div>
             </div>
           </div>
@@ -53,7 +55,7 @@
             <div class="col-md-12">
               <div class="form-group form-group-default">
                 <label>Codigo</label>
-                <input type="text" name="uname" placeholder="Ingrese su codigo" class="form-control" required>
+                <input type="text" name="codigo" placeholder="Ingrese su codigo" class="form-control" required>
               </div>
             </div>
           </div>
@@ -61,7 +63,7 @@
             <div class="col-md-12">
               <div class="form-group form-group-default">
                 <label>Contraseña</label>
-                <input type="password" name="pass" placeholder="Combine Mayusculas y caracteres" class="form-control" required>
+                <input type="password" name="password" placeholder="Combine Mayusculas y caracteres" class="form-control" required>
               </div>
             </div>
           </div>
@@ -79,10 +81,10 @@
               
                 <label>Email</label>
                
-                <div class="radio radio-success">
-                            <input type="radio" value="1" name="optionyes" id="Estudiante">
+                <div  class="radio radio-success">
+                            <input type="radio" value="1" name="tipo" id="Estudiante">
                             <label for="Estudiante">Estudiante</label>
-                            <input type="radio" checked="checked" value="2" name="optionyes" id="Docente">
+                            <input type="radio" checked="checked" value="2" name="tipo" id="Docente">
                             <label for="Docente">Docente</label>
                           </div>
              
@@ -98,7 +100,7 @@
         <div class="m-b-30 sm-m-t-20 sm-p-r-15 sm-p-b-20 clearfix d-flex-md-up">
           
           <div class="col-md-9 no-padding d-flex align-items-center">
-            <p class="hinted-text small inline sm-p-t-10">Verificar que todos los datos coincidan </p>
+            
           </div>
         </div>
       </div>

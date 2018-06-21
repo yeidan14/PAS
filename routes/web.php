@@ -10,12 +10,19 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('postLogin', function() {
+    return view('name');
+});
+
+
+Route::get('/home', [
+    'uses' => 'lab_controller@home',
+    'as' => 'path_home',
+]);
 
 Route::get('/', function () {
     return view('welcome');
 });
-
-
 Route::get('/admin', function () {
     return view('admin');
 });
@@ -73,92 +80,78 @@ Route::get('correoadmin',[
 
 
 
-///////rutas nuevas 
+///////////
 
 
-Route::get('/loginUser', [
+Route::post('postloginuser', [
 
-    'uses' => 'ControllerLogin@showLoginForm',
-    'as'   => 'auth_index_path',
-
-]);
-
-Route::post('/SitePersonal', [
-
-    'uses' => 'ControllerLogin@site',
-    'as'   => 'auth_login_path',
+'uses' => 'ControllerLogin@postLogin',
+    'as'   => 'postloginuser',
 
 ]);
 
-Route::post('/logoutUser', [
+Route::post('postloginadmin', [
 
-    'uses' => 'ControllerSite@logoutUser',
-    'as'   => 'auth_destroy_path',
-
-]);
-
-Route::post('/bienvenido', [
-
-    'uses' => 'ControllerLogin@renewUser',
-    'as'   => 'auth_renew_path',
+'uses' => 'ControllerLogin@postLoginadmin',
+    'as'   => 'postloginadmin',
 
 ]);
 
-Route::get('/pass/reset', [
+Route::post('postlogin', [
 
-    'uses' => 'ControllerLogin@forgottenPass',
-    'as'   => 'auth_reset_path',
+'uses' => 'ControllerLogin@exito',
+    'as'   => 'path_exito',
 
 ]);
 
-//----------------------------------------------------
-
-Route::group(['middleware' => 'auth'], function () {
-
-    Route::get('/site', [
-
-        'uses' => 'ControllerSite@showSite',
-        'as'   => 'auth_show_path',
-
-    ]);
-
-    Route::get('SitePersonal', [
-
-        'uses' => 'ControllerLogin@site',
-        'as'   => 'auth_login_path',
-
-    ]);
-
-    Route::get('/logoutUser', [
-
-        'uses' => 'ControllerSite@logoutUser',
-        'as'   => 'auth_destroy_path',
-
-    ]);
-
-    Route::get('/bienvenido', [
-
-        'uses' => 'ControllerLogin@renewUser',
-        'as'   => 'auth_renew_path',
-
-    ]);
-
-    Route::get('/pass/reset', [
-
-        'uses' => 'ControllerLogin@forgottenPass',
-        'as'   => 'auth_reset_path',
-
-    ]);
-
-});
-
-Auth::routes();
-
-Route::get('user', 'HomeController@index')->name('user');
 
 
 
+Route::get('postlogout', [
 
+'uses' => 'ControllerLogin@logout',
+    'as'   => 'path_logout',
+]);
+
+
+Route::get('postlogoutadmin', [
+
+'uses' => 'ControllerLogin@logoutadmin',
+    'as'   => 'path_logoutadmin',
+]);
+
+Route::post('postconsultae', [
+
+'uses' => 'ControllerLogin@consultaElemento',
+    'as'   => 'path_consultae',
+]);
+
+
+
+Route::post('postregistro', [
+
+'uses' => 'ControllerLogin@registrar',
+    'as'   => 'path_postregistro',
+]);
+
+
+Route::post('postsolicitud', [
+
+'uses' => 'ControllerLogin@registrarsolicitudElemento',
+    'as'   => 'registrosolicitud',
+]);
+
+
+Route::get('alertalogin',[
+    'uses' => 'lab_controller@alertalogin',
+    'as' => 'path_alerta',
+]);
+
+
+Route::get('elementos',[
+    'uses' => 'listarController@create',
+    'as' => 'path_elementos',
+]);
 
 
 

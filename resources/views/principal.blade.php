@@ -129,7 +129,7 @@
           <!-- END NOTIFICATIONS LIST -->
           <!-- START User Info-->
           <div class="pull-left p-r-10 fs-14 font-heading hidden-md-down m-l-20">
-            <span class="semi-bold">David</span> <span class="text-master">Nest</span>
+            <span class="semi-bold">@yield('name')</span> 
           </div>
           <div class="dropdown pull-right hidden-md-down">
             <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -140,7 +140,8 @@
             
           </div>
           <!-- END User Info-->
-          <a href="#" class="header-icon pg pg-power btn-link m-l-10 sm-no-margin d-inline-block" data-toggle="quickview" data-toggle-element="#quickview"></a>
+
+<a   class="header-icon pg pg-power btn-link m-l-10 sm-no-margin d-inline-block"  href="{{route('path_logout')}}"></a>          </a>
         </div>
       </div>
       <!-- END HEADER -->

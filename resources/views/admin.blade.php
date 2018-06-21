@@ -55,12 +55,14 @@
         
           <img src="{{URL::asset('vista/assets/img/logohorizontal.png')}}" alt="logo" data-src=" {{URL::asset('vista/assets/img/logohorizontal.png')}}" data-src-retina=" {{URL::asset('vista/assets/img/logohorizontal.png')}}"  height="100">
           <!-- START Login Form -->
-          <form id="form-login" class="p-t-15" role="form" method="POST">
+          <form id="form-login" class="p-t-15" role="form" method="POST" action="{{route('postloginadmin')}}">
+            @csrf
             <!-- START Form Control-->
+            <div>@yield('alertaloginadmin')</div>
             <div class="form-group form-group-default">
               <label>Administrador</label>
               <div class="controls">
-                <input type="text" name="username" placeholder="Ingrese su codigo" class="form-control" required>
+                <input type="email" name="email" placeholder="Ingrese su correo" class="form-control" required>
               </div>
             </div>
             <!-- END Form Control-->

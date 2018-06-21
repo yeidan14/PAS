@@ -58,14 +58,14 @@
         
         
           <form id="form-login" class="p-t-15" role="form" method="POST" 
-          action="{{ route('login') }}">
+          action="{{ route('postloginuser') }}">
                         @csrf
                         
             <!-- START Form Control-->
             <div class="form-group form-group-default{{ $errors->has('correo') ? ' has-error' : '' }}">
               <label>Usuario</label>
               <div class="controls">
-                <input type="numb" name="correo" placeholder="Ingrese su codigo" class="form-control" value="{{old('correo') }}" required>
+                <input type="numb" name="email" placeholder="Ingrese su codigo" class="form-control"  required>
 
 
                  @if ($errors->has('correo'))
@@ -80,7 +80,7 @@
             <div class="form-group form-group-default{{ $errors->has('clave') ? ' has-error' : '' }}">
               <label>Contraseña</label>
               <div class="controls">
-                <input type="password" class="form-control" name="clave" placeholder="Ingrese su Contraseña" required>
+                <input type="password" class="form-control" name="password" placeholder="Ingrese su Contraseña" required>
                 @if ($errors->has('clave'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('clave') }}</strong>
@@ -88,6 +88,10 @@
                                 @endif
               </div>
             </div>
+
+            <div>@yield('alertalogin')
+            @yield('alertaregistroexitoso')</div>
+
             <div>
                 <br><br>
             </div>
@@ -102,6 +106,7 @@
                 <a href="{{route('path_registrar')}}" class="text-info small">Registrate</a>
               </div>
             </div>
+            
             <!-- END Form Control-->
             <button class="btn btn-primary btn-cons m-t-10" type="submit">INGRESAR</button>
           </form>

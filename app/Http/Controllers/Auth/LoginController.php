@@ -21,7 +21,7 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-        return view("welcome");
+        return view("auth.login");
     }
 
     use AuthenticatesUsers;
@@ -32,7 +32,7 @@ class LoginController extends Controller
      * @var string
      */
     // protected $redirectTo = '/home';
-    protected $redirectTo = '/user';
+    protected $redirectTo = 'user';
 
     /**
      * Create a new controller instance.

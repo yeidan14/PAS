@@ -26,21 +26,34 @@
                     <thead>
                       <tr>
                         <!-- NOTE * : Inline Style Width For Table Cell is Required as it may differ from user to user
-    										Comman Practice Followed
-    										-->
-                        <th style="width:1%" class="text-center">
+                        Comman Practice Followed
+                        -->
+                        <th style="width:3%" class="text-center">
                           <button class="btn btn-link"><i class="pg-trash"></i>
                           </button>
                         </th>
-                        <th style="width:20%">Title</th>
-                        <th style="width:20%">Places</th>
-                        <th style="width:29%">Activities</th>
-                        <th style="width:15%">Status</th>
-                        <th style="width:15%">Last Update</th>
+
+                        <th style="width:3%" class="text-center">
+                          <button class="btn btn-link"><i class="pg-"></i>
+                          </button>
+                        </th>
+                        <th style="width:20%">fecha</th>
+                        <th style="width:15%">Hora inicio</th>
+                        <th style="width:29%">Hora fin</th>
+                        <th style="width:15%">elemento</th>
+                        <th style="width:15%">cadEelemento</th>
+                        <th style="width:15%">estado</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
+                        <td class="v-align-middle">
+                          <div class="checkbox text-center">
+                            <input type="checkbox" value="3" id="checkbox1">
+                            <label for="checkbox1" class="no-padding no-margin"></label>
+                          </div>
+                        </td>
+
                         <td class="v-align-middle">
                           <div class="checkbox text-center">
                             <input type="checkbox" value="3" id="checkbox1">
@@ -70,6 +83,13 @@
                             <label for="checkbox2" class="no-padding no-margin"></label>
                           </div>
                         </td>
+
+                        <td class="v-align-middle">
+                          <div class="checkbox text-center">
+                            <input type="checkbox" value="3" id="checkbox1">
+                            <label for="checkbox1" class="no-padding no-margin"></label>
+                          </div>
+                        </td>
                         <td class="v-align-middle ">
                           <p>Among the children</p>
                         </td>
@@ -91,6 +111,13 @@
                           <div class="checkbox text-center">
                             <input type="checkbox" value="3" id="checkbox3">
                             <label for="checkbox3" class="no-padding no-margin"></label>
+                          </div>
+                        </td>
+
+                        <td class="v-align-middle">
+                          <div class="checkbox text-center">
+                            <input type="checkbox" value="3" id="checkbox1">
+                            <label for="checkbox1" class="no-padding no-margin"></label>
                           </div>
                         </td>
                         <td class="v-align-middle ">
@@ -116,6 +143,13 @@
                             <label for="checkbox4" class="no-padding no-margin"></label>
                           </div>
                         </td>
+
+                        <td class="v-align-middle">
+                          <div class="checkbox text-center">
+                            <input type="checkbox" value="3" id="checkbox1">
+                            <label for="checkbox1" class="no-padding no-margin"></label>
+                          </div>
+                        </td>
                         <td class="v-align-middle ">
                           <p>Life’s sadness shared</p>
                         </td>
@@ -139,6 +173,12 @@
                             <label for="checkbox5" class="no-padding no-margin"></label>
                           </div>
                         </td>
+                        <td class="v-align-middle">
+                          <div class="checkbox text-center">
+                            <input type="checkbox" value="3" id="checkbox1">
+                            <label for="checkbox1" class="no-padding no-margin"></label>
+                          </div>
+                        </td>
                         <td class="v-align-middle ">
                           <p>First Tour</p>
                         </td>
@@ -160,6 +200,12 @@
                           <div class="checkbox text-center">
                             <input type="checkbox" value="3" id="checkbox6">
                             <label for="checkbox6" class="no-padding no-margin"></label>
+                          </div>
+                        </td>
+                        <td class="v-align-middle">
+                          <div class="checkbox text-center">
+                            <input type="checkbox" value="3" id="checkbox1">
+                            <label for="checkbox1" class="no-padding no-margin"></label>
                           </div>
                         </td>
                         <td class="v-align-middle ">

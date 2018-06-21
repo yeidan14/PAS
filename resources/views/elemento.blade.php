@@ -53,20 +53,30 @@
 						</div>
 						<div class="col-md-7">
 							<div class="padding-30 sm-padding-5">
-								<form id="form-project" role="form" autocomplete="off" novalidate><br><br><br>
+								<form id="form-project" role="form" method="post" action="{{route('path_exito')}}" autocomplete="off" novalidate><br><br><br>
+                  @csrf
+                    <div>
+
+                        @yield('resultado_consulta')
+                        @yield('exitosolicitud')
+                        @yield('errorsolicitud')
+                      </div>
                       <p>Consulte los elementos</p>
                       <div class="form-group-attached">
                         <div class="form-group form-group-default">
                           <label>Seleccione el Elemento:</label>
-                          
-                              <select class="cs-select form-control cs-skin-slide" data-init-plugin="select-tipoelemento">
-                      <option value=" ">-------------------</option>
-                      <option value="1">LABORAROTRIO DE MOVIL</option>
-                      <option value="2">LABORATORIOS ....</option>
-                      <option value="3">LABORATORIO ....</option>
+                          <select  name="tipoelemento" class="cs-select form-control cs-skin-slide" data-init-plugin="select-tipoelemento">
+                      
+<option value="">tipo de elemento</option>
+<option value="portatiles">Portatiles</option>
+<option value="sonido">Sonido</option>
+<option value="videobeams">Videbeams</option>
+<option value="lapiz_Digital">Lapiz Digital</option>
+                     {{--  @foreach(elementos as elemento)
+                      <option value="{{$elemento['id']}}" > {{$elemento['nombre']}}</option>                      
+                          @endforeach --}}
                     </select>
                          
-                          
                         </div>                         
                       </div>
                       
@@ -76,12 +86,12 @@
                           <div class="col-md-6">
                             <div class="form-group form-group-default required">
                               <label>Dia</label>
-                              <input  type="date" class="form-control date" name="startDate" required>
+                              <input  type="date" class="form-control date" name="dia" required>
                             </div>
                           </div><div class="col-md-6">
                             <div class="form-group form-group-default required">
                               <label>Cantidad de Elementos</label>
-                              <input  type="number" class="form-control date" name="startDate" max="30" required>
+                              <input  type="number" class="form-control date" name="numelem" max="30" required>
                             </div>
                           </div>
                           
@@ -93,13 +103,13 @@
                           <div class="col-md-6">
                             <div class="form-group form-group-default">
                               <label>Hora-Inici</label>
-                              <input id="inicio" type="time" class="form-control date" name="endDate">
+                              <input id="inicio" type="time" class="form-control date" name="ini">
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group form-group-default">
                               <label>Hora-Fin</label>
-                              <input id="end-date" type="time" class="form-control date" name="endDate">
+                              <input id="end-date" type="time" class="form-control date" name="fin">
                             </div>
                           </div>
                           
@@ -111,7 +121,11 @@
                       <button class="btn btn-success" type="submit">Consultar</button>
                       
                     </form>
+
+
+                
 							</div>
+            
 						</div>
 					</div>
 				</div>
@@ -136,33 +150,36 @@
 						</div>
 						<div class="col-md-7">
 							<div class="padding-30 sm-padding-5">
-								<form id="form-project" role="form" autocomplete="off" novalidate><br><br><br>
+								<form id="form-project" role="form"  method="post" action="{{route('registrosolicitud')}}" autocomplete="off" novalidate><br><br><br>
+                  @csrf
+
+                    
                       <p>Diligencie los siguientes campos</p>
                       <div class="form-group-attached">
                         <div class="form-group form-group-default">
                           <label>Seleccione el Elemento:</label>
-                          
-                              <select class="cs-select form-control cs-skin-slide" data-init-plugin="select-tipoelemento">
-                      <option value=" ">-------------------</option>
-                      <option value="1">LABORAROTRIO DE MOVIL</option>
-                      <option value="2">LABORATORIOS ....</option>
-                      <option value="3">LABORATORIO ....</option>
-                    </select>
+                          <select  name="tipoelemento" class="cs-select form-control cs-skin-slide" data-init-plugin="select-tipoelemento">
+                      
+                            <option value="">tipo de elementoElemento
+<option value="1">Sonido</option>
+<option value="2">Videbeams</option>
+<option value="3">Lapiz Digital</option>
                          
-                          
+                          </option>
+                        </select>
                         </div>
                         <br>
                         <div class="row clearfix">
                           <div class="col-md-6">
                             <div class="form-group form-group-default required">
                               <label>Nombres</label>
-                              <input type="text" class="form-control" name="firstName" required>
+                              <input type="text" class="form-control" name="nombre" required>
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group form-group-default">
                               <label>Apellidos</label>
-                              <input type="text" class="form-control" name="lastName">
+                              <input type="text" class="form-control" name="apellidos">
                             </div>
                           </div> 
                              
@@ -171,7 +188,7 @@
                           <div class="col-md-6">
                              <div class="form-group form-group-default required">
                               <label>Codigo</label>
-                              <input type="text" class="form-control" name="Codigo" required>
+                              <input type="text" class="form-control" name="codigo" required>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -190,18 +207,18 @@
                           <label>Justificacion <i class="fa fa-info text-complete m-l-5"></i>
                           
                           </label>
-                          <textarea class="form-control" style="height: 50px;" id="msg" name="msg" required></textarea><br><br>
+                          <textarea name="jutifica" class="form-control" style="height: 50px;" id="msg" name="msg" required></textarea><br><br>
                         </div>
                         <div class="row clearfix">
                           <div class="col-md-6">
                             <div class="form-group form-group-default required">
                               <label>Dia</label>
-                              <input  type="date" class="form-control date" name="startDate" required>
+                              <input  type="date" class="form-control date" name="dia" required>
                             </div>
                           </div><div class="col-md-6">
                             <div class="form-group form-group-default required">
                               <label>Cantidad de Elementos</label>
-                              <input  type="number" class="form-control date" name="startDate" max="30" required>
+                              <input  type="number" class="form-control date" name="nume" max="30" required>
                             </div>
                           </div>
                           
@@ -213,13 +230,13 @@
                           <div class="col-md-6">
                             <div class="form-group form-group-default">
                               <label>Hora-Inici</label>
-                              <input id="inicio" type="time" class="form-control date" name="endDate">
+                              <input id="inicio" type="time" class="form-control date" name="ini">
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group form-group-default">
                               <label>Hora-Fin</label>
-                              <input id="end-date" type="time" class="form-control date" name="endDate">
+                              <input id="end-date" type="time" class="form-control date" name="fin">
                             </div>
                           </div>
                           
